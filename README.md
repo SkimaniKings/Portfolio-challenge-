@@ -35,10 +35,12 @@ Only HTML & CSS — all creativity had to be expressed within those limits.
 
 ---
 
-## 🖼️ Preview
+## 🚀 Deployment
 
-![screenshot](images/Portfolio screenshot.png)
-> 📍 [Live Demo on GitHub Pages](https://yourusername.github.io/portfolio)
+This project is deployed using **Vercel** for fast, free, and secure hosting.
+
+--
+> 📍 [Deployed on Vercel](https://simonkimani-portfolio.vercel.app/)
 
 ---
 
