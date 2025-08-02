@@ -319,3 +319,169 @@ header {
     grid-template-columns: 1fr;
   }
 }
+/* Educational Timeline CSS Section   */
+
+.education {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+}
+
+.education-intro {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #00ffcc;
+  transform: translateX(-50%);
+  animation: glowLine 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowLine {
+  from { box-shadow: 0 0 5px #00ffcc; }
+  to { box-shadow: 0 0 20px #00ffcc; }
+}
+
+/* Timeline items */
+.timeline-item {
+  padding: 1rem;
+  position: relative;
+  width: 50%;
+}
+
+/* Left side */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+/* Right side */
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Common content box */
+.timeline-content {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  border: 2px dashed #00ffcc;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Glitchy terminal labels */
+.node-label {
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  25% { text-shadow: -2px 0 blue; }
+  50% { text-shadow: 2px 2px lime; }
+  75% { text-shadow: -2px -2px magenta; }
+  100% { text-shadow: 1px -1px cyan; }
+}
+
+/* Download CV Button */
+.download-cv {
+  margin-top: 3rem;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: #00ffcc;
+  font-family: monospace;
+  font-size: 1rem;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  animation: blink 2s infinite;
+}
+
+.cv-btn:hover {
+  background-color: #00ffcc;
+  color: #000;
+  animation: none;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: left !important;
+  }
+
+  .timeline-item.right, .timeline-item.left {
+    left: 0;
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+}
