@@ -485,3 +485,152 @@ header {
     text-align: left;
   }
 }
+/* Interests Section: Tech Pulse Grid */
+
+.interests {
+  color: #f0f0f0;
+  padding: 5rem 2rem;
+  text-align: center;
+  width:80%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: monospace;
+  font-size: 2rem;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+.interests-intro {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Base interest module */
+.interest-module {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0; /* Initially hidden, shown via animation */
+  color: inherit;
+}
+
+.interest-module:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px currentColor;
+}
+
+/* Icon */
+.icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Headings and text */
+.interest-module h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.interest-module p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Color variants */
+.interest-module.blue {
+  color: #00bfff;
+  animation: pulseBlue 4s infinite ease-in-out, fadeInUp 1s ease forwards;
+}
+
+.interest-module.red {
+  color: #ff4d4d;
+  animation: pulseRed 4s infinite ease-in-out, fadeInUp 1.2s ease forwards;
+}
+
+.interest-module.green {
+  color: #33ff99;
+  animation: pulseGreen 4s infinite ease-in-out, fadeInUp 1.4s ease forwards;
+}
+
+.interest-module.purple {
+  color: #cc66ff;
+  animation: pulsePurple 4s infinite ease-in-out, fadeInUp 1.6s ease forwards;
+}
+
+.interest-module.yellow {
+  color: #ffcc00;
+  animation: pulseYellow 4s infinite ease-in-out, fadeInUp 1.8s ease forwards;
+}
+
+.interest-module.cyan {
+  color: #00ffff;
+  animation: pulseCyan 4s infinite ease-in-out, fadeInUp 2s ease forwards;
+}
+
+/* Pulse animations */
+@keyframes pulseBlue {
+  0%, 100% { box-shadow: 0 0 10px #00bfff; }
+  50% { box-shadow: 0 0 30px #00bfff; }
+}
+@keyframes pulseRed {
+  0%, 100% { box-shadow: 0 0 10px #ff4d4d; }
+  50% { box-shadow: 0 0 30px #ff4d4d; }
+}
+@keyframes pulseGreen {
+  0%, 100% { box-shadow: 0 0 10px #33ff99; }
+  50% { box-shadow: 0 0 30px #33ff99; }
+}
+@keyframes pulsePurple {
+  0%, 100% { box-shadow: 0 0 10px #cc66ff; }
+  50% { box-shadow: 0 0 30px #cc66ff; }
+}
+@keyframes pulseYellow {
+  0%, 100% { box-shadow: 0 0 10px #ffcc00; }
+  50% { box-shadow: 0 0 30px #ffcc00; }
+}
+@keyframes pulseCyan {
+  0%, 100% { box-shadow: 0 0 10px #00ffff; }
+  50% { box-shadow: 0 0 30px #00ffff; }
+}
+
+/* Fade-in animation for load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .interest-module {
+    padding: 1.5rem 1rem;
+  }
+}
