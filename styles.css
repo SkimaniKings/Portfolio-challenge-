@@ -97,3 +97,130 @@ header {
     align-items: flex-start;
   }
 }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #00ffcc;
+}
+
+/* Hero Section Layout */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  animation: bgPulse 12s ease-in-out infinite;
+}
+
+/* Left and Right Columns */
+.hero-left, .hero-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Banner Image */
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 9.3s forwards;
+}
+
+/* Animated Text Wrapper */
+.glitch-text {
+  animation: loopSequence 12s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Loop animation to reset all */
+@keyframes loopSequence {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Glitch + Typewriter Line Styling */
+.glitch-line {
+  font-family: monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ffcc;
+  width: 0;
+  opacity: 0;
+  animation: typewriter 2s steps(30) forwards, glitch 0.3s infinite alternate;
+}
+
+/* Staggered reveal delays */
+.line-1 { animation-delay: 0.5s, 0.5s; }
+.line-2 { animation-delay: 2.7s, 2.7s; }
+.line-3 { animation-delay: 4.9s, 4.9s; }
+.line-4 { animation-delay: 7.1s, 7.1s; }
+
+/* Highlighted Name */
+.highlight {
+  color: #ff4081;
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Glitch shadow flicker */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  25% { text-shadow: -2px 0 blue; }
+  50% { text-shadow: 2px 2px lime; }
+  75% { text-shadow: -2px -2px magenta; }
+  100% { text-shadow: 1px -1px cyan; }
+}
+
+/* Fade in image */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional: Background color pulse animation */
+@keyframes bgPulse {
+  0%   { background-color: #000; }
+  25%  { background-color: #111; }
+  50%  { background-color: #000; }
+  75%  { background-color: #111; }
+  100% { background-color: #000; }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    padding: 1rem;
+  }
+
+  .glitch-line {
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+  }
+}
