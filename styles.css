@@ -534,7 +534,7 @@ header {
     text-align: left;
   }
 }
-/* Interests Section: Tech Pulse Grid */
+/* Interests Section*/
 
 .interests {
   color: #f0f0f0;
@@ -858,7 +858,7 @@ header {
     padding: 1.2rem;
   }
 }
-/*  Projects Section: Holographic Grid */
+/*  Projects Section*/
 
 .projects {
    color: #f0f0f0;
@@ -1089,7 +1089,7 @@ textarea {
     font-size: 0.95rem;
   }
 }
-/* Footer – Terminal Shutdown  */
+/* Footer */
 
 .site-footer {
   background-color: #090909;
