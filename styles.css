@@ -155,7 +155,7 @@ header {
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  animation: bgPulse 13.7s ease-in-out infinite;
+  animation: bgPulse 13s ease-in-out infinite;
 }
 
 .hero-left, .hero-right {
@@ -171,7 +171,7 @@ header {
   width: auto;               
   object-fit: contain;       
   opacity: 0;
-  animation: fadeIn 2s ease-in-out 13.7s forwards;
+  animation: fadeIn 2s ease-in-out 10s forwards;
   display: block;
   margin: 0 auto;       
 
