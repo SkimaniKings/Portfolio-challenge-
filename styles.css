@@ -126,12 +126,21 @@ body {
   padding: 2rem;
 }
 
-/* Banner Image */
 .hero-img {
-  width: 100%;
-  max-width: 500px;
+  max-height: 400px;         
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: auto;               
+  object-fit: contain;       
   opacity: 0;
   animation: fadeIn 2s ease-in-out 9.3s forwards;
+  display: block;
+  margin: 0 auto;       
+       
+}.hero-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 255, 204, 0.4);
 }
 
 /* Animated Text Wrapper */
@@ -166,6 +175,8 @@ body {
 .line-2 { animation-delay: 2.7s, 2.7s; }
 .line-3 { animation-delay: 4.9s, 4.9s; }
 .line-4 { animation-delay: 7.1s, 7.1s; }
+.line-5 { animation-delay: 9.3s, 9.3s; }
+.line-6 { animation-delay: 11.5s, 11.5s; }
 
 /* Highlighted Name */
 .highlight {
@@ -196,7 +207,7 @@ body {
   }
 }
 
-/* Optional: Background color pulse animation */
+/*Background color pulse animation */
 @keyframes bgPulse {
   0%   { background-color: #000; }
   25%  { background-color: #111; }
