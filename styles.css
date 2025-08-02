@@ -1,4 +1,4 @@
-/* Reset */
+/* Global  Styles*/
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,9 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #00ffcc;
 }
-
 /* Header/navbar */
 header {
   position: fixed;
@@ -97,19 +98,6 @@ header {
     align-items: flex-start;
   }
 }
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #00ffcc;
-}
-
 /* Hero Section Layout */
 .hero {
   display: flex;
@@ -137,7 +125,7 @@ body {
   animation: fadeIn 2s ease-in-out 9.3s forwards;
   display: block;
   margin: 0 auto;       
-       
+
 }.hero-img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 255, 204, 0.4);
@@ -145,7 +133,7 @@ body {
 
 /* Animated Text Wrapper */
 .glitch-text {
-  animation: loopSequence 12s linear infinite;
+  animation: loopSequence 13s linear infinite;
   opacity: 0;
   pointer-events: none;
 }
@@ -177,6 +165,7 @@ body {
 .line-4 { animation-delay: 7.1s, 7.1s; }
 .line-5 { animation-delay: 9.3s, 9.3s; }
 .line-6 { animation-delay: 11.5s, 11.5s; }
+.line-7 { animation-delay: 13.7s, 13.7s; }
 
 /* Highlighted Name */
 .highlight {
@@ -233,5 +222,100 @@ body {
 
   .hero-img {
     margin-top: 2rem;
+  }
+}
+/* About Section */
+.about {
+  padding: 5rem 2rem;
+  /* background-color: #0a0a0a; */
+  color: #f0f0f0;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Puzzle pieces */
+.puzzle-piece {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px dashed #00ffcc;
+  box-shadow: 0 0 0 transparent;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.puzzle-piece h3 {
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.puzzle-piece p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Hover Effects */
+.puzzle-piece:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffcc;
+  background-color: #1a1a1a;
+}
+
+/* Staggered fade-in delays */
+.piece-1 { animation-delay: 0.3s; }
+.piece-2 { animation-delay: 0.6s; }
+.piece-3 { animation-delay: 0.9s; }
+.piece-4 { animation-delay: 1.2s; }
+.piece-5 { animation-delay: 1.5s; }
+.piece-6 { animation-delay: 1.8s; }
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .puzzle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .puzzle-grid {
+    grid-template-columns: 1fr;
   }
 }

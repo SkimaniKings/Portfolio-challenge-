@@ -1,71 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="nav-container">
+        <!-- Logo on the left -->
+        <div class="logo-container">
+          <img src="images/logo.png" alt="Logo" class="logo" />
+        </div>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="nav-container">
-      <!-- Logo on the left -->
-      <div class="logo-container">
-        <img src="images/logo.png" alt="Logo" class="logo" />
-      </div>
+        <!-- Hamburger menu toggle input -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 
-      <!-- Hamburger menu toggle input -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <!-- Hamburger label (icon) -->
+        <label for="nav-toggle" class="hamburger">&#9776;</label>
 
-      <!-- Hamburger label (icon) -->
-      <label for="nav-toggle" class="hamburger">&#9776;</label>
+        <!-- Navigation links -->
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+      </head>
+      <body>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+          <div class="hero-left">
+            <div class="glitch-text">
+              <p class="glitch-line line-1">Initializing portfolio...</p>
+              <p class="glitch-line line-2">Loading identity...</p>
+              <p class="glitch-line line-3">
+                Hello. I'm <span class="highlight">Simon Kimani</span>.
+              </p>
+              <p class="glitch-line line-4">I turn coffeee into code!</p>
+              <p class="glitch-line line-5">
+                Full Stack Artist. Problem Solver.
+              </p>
+              <p class="glitch-line line-6">Full-time Innovator.</p>
+              <p class="glitch-line line-7">Welcome to my digital realm!</p>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img src="Images/simon.png" alt="Banner Image" class="hero-img" />
+          </div>
+        </section>
+        <!-- About Section -->
+        <section class="about" id="about">
+          <h2 class="section-title">Who am I?</h2>
+          <p class="about-intro">
+            I’m not just a coder — I’m a creative thinker, a curious learner,
+            and a problem-solver driven by passion. My journey in tech is fueled
+            by a love for design, logic, and turning ideas into digital reality.
+          </p>
+          <div class="puzzle-grid">
+            <div class="puzzle-piece piece-1">
+              <h3>Problem Solver</h3>
+              <p>
+                I enjoy tackling complex problems and finding clean, efficient
+                solutions.
+              </p>
+            </div>
 
-      <!-- Navigation links -->
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-</head>
-<body>
+            <div class="puzzle-piece piece-2">
+              <h3>Design Lover</h3>
+              <p>
+                Pixel-perfect designs and intuitive UX drive my front-end
+                choices.
+              </p>
+            </div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-left">
-      <div class="glitch-text">
-        <p class="glitch-line line-1">Initializing portfolio...</p>
-        <p class="glitch-line line-2">Loading identity...</p>
-        <p class="glitch-line line-3">Hello. I'm <span class="highlight">Simon Kimani</span>.</p>
-        <p class="glitch-line line-4">Full Stack Artist. Problem Solver.</p>
-        <p class="glitch-line line-5">Full-time Innovator.</p>
-        <p class="glitch-line line-6">Welcome to my digital realm!</p>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="Images/simon.png" alt="Banner Image" class="hero-img" />
-    </div>
-  </section>
+            <div class="puzzle-piece piece-3">
+              <h3>Lifelong Learner</h3>
+              <p>
+                I thrive on continuous learning and exploring new technologies.
+              </p>
+            </div>
 
-</body>
-</html>
+            <div class="puzzle-piece piece-4">
+              <h3>Team Player</h3>
+              <p>
+                Collaboration and clear communication are at the heart of my
+                work.
+              </p>
+            </div>
 
+            <div class="puzzle-piece piece-5">
+              <h3>Fast Learner</h3>
+              <p>I quickly adapt to new tools and environments with ease.</p>
+            </div>
 
-
-</body>
+            <div class="puzzle-piece piece-6">
+              <h3>Analytical Thinker</h3>
+              <p>
+                I bring logic and structure into everything I build and analyze.
+              </p>
+            </div>
+          </div>
+        </section>
+      </body>
+    </html>
+  </body>
 </html>
