@@ -158,7 +158,6 @@ header {
   animation: bgPulse 12s ease-in-out infinite;
 }
 
-/* Left and Right Columns */
 .hero-left, .hero-right {
   flex: 1;
   padding: 2rem;
@@ -277,7 +276,7 @@ header {
 /* About Section */
 .about {
   padding: 5rem 2rem;
-  /* background-color: #0a0a0a; */
+
   color: #f0f0f0;
   text-align: center;
   width: 80%;
@@ -578,7 +577,7 @@ header {
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.4s ease;
   animation: fadeInUp 1s ease forwards;
-  opacity: 0; /* Initially hidden, shown via animation */
+  opacity: 0;
   color: inherit;
 }
 
@@ -768,7 +767,7 @@ header {
   transition: 0.4s ease;
 }
 
-/* ===== Proficiency Fill Effects ===== */
+/*Proficiency Fill Effects*/
 
 .skill-card::before {
   content: "";
@@ -859,9 +858,7 @@ header {
     padding: 1.2rem;
   }
 }
-/* ================================
-   Projects Section: Holographic Grid
-   ================================ */
+/*  Projects Section: Holographic Grid */
 
 .projects {
    color: #f0f0f0;
