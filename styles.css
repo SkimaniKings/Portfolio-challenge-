@@ -634,3 +634,178 @@ header {
     padding: 1.5rem 1rem;
   }
 }
+/* Skills Section */
+
+.skills {
+  color: #f0f0f0;
+  padding: 5rem 2rem;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skills .section-title {
+  font-family: monospace;
+  font-size: 2rem;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+.skills-intro {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Skill Cards */
+.skill-card {
+  position: relative;
+  background: #141414;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  font-family: monospace;
+  text-align: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Icon */
+.skill-card .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* Title */
+.skill-card h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Level Overlay (hidden by default) */
+.level-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #000;
+  font-weight: bold;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00ffcc;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* ===== Proficiency Fill Effects ===== */
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  background: currentColor;
+  transition: height 0.4s ease;
+  opacity: 0.2;
+}
+
+/* Hover triggers overlay + fill */
+.skill-card:hover .level-overlay {
+  opacity: 1;
+}
+
+/* Wizard (100%) */
+.skill-card.wizard::before {
+  height: 0;
+}
+.skill-card.wizard:hover::before {
+  height: 100%;
+}
+
+/* Ninja (75%) */
+.skill-card.ninja::before {
+  height: 0;
+}
+.skill-card.ninja:hover::before {
+  height: 75%;
+}
+
+/* Apprentice (40%) */
+.skill-card.apprentice::before {
+  height: 0;
+}
+.skill-card.apprentice:hover::before {
+  height: 40%;
+}
+
+/* Color Themes */
+.skill-card.html {
+  color: #f16529;
+  border-color: #f16529;
+}
+.skill-card.css {
+  color: #2965f1;
+  border-color: #2965f1;
+}
+.skill-card.js {
+  color: #f7df1e;
+  border-color: #f7df1e;
+}
+.skill-card.python {
+  color: #306998;
+  border-color: #306998;
+}
+.skill-card.java {
+  color: #e76f00;
+  border-color: #e76f00;
+}
+.skill-card.react {
+  color: #61dafb;
+  border-color: #61dafb;
+}
+.skill-card.mysql {
+  color: #00758f;
+  border-color: #00758f;
+}
+.skill-card.c {
+  color: #00599c;
+  border-color: #00599c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills .section-title {
+    font-size: 1.7rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .skill-card {
+    padding: 1.2rem;
+  }
+}
